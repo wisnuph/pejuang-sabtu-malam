@@ -109,3 +109,77 @@ Kemudian tim kami melakukan data Pre-processing yakni dengan melakukan tahapan b
   - Jumlah Aset lainnya
   - Business Ownership
   - Income lainnya
+
+## Insight Summary dari [Modelling and Evaluation](https://colab.research.google.com/drive/1S3XWj_aQnOsSFXGh6Ej67QZyJrtYzHMk?usp=sharing)
+
+Pada tahap ini kami menggunakan tiga algoritma selama proses modelling yang diantaranya:
+
+- **Logistic Regression**
+
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/e4c6ac42-0bf2-46fb-87bc-d5795cdaf616)
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/6915cab2-db71-41c7-8e04-7612dcc61dd3)
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/b822fb41-7ac3-4891-afaa-2d144e8a24d4)
+
+  Dari hasil pemodelan dengan algoritma Logistic Regression secara default, mendapatkan nilai seperti pada tabel diatas. Dari hasil tersebut didapatkan nilai metrics yang masih terbilang rendah akan tetapi dari nilai test dan train yang didapatkan model sangat fit.
+
+  Berdasarkan nilai recallnya (50%) apabila kita memiliki 100 orang nasabah yang resiko gagal bayar maka model logistic regression hanya dapat menangkap 50 orang diantaranya.
+
+- **K-Nearest Neighbor(KNN)**
+
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/38efcba6-42c0-42c3-a595-4249ed30606f)
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/2d1cd098-8fd7-49e2-8ca9-95030e18787d)
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/34977606-5ed0-461b-bfa8-455bd319c41e)
+
+  Dari hasil pemodelan dengan algoritma K-Nearest Neighbour secara default, mendapatkan nilai seperti pada tabel diatas. Dari hasil tersebut didapatkan nilai metrics yang lebih baik dari hasil Logistic Regression. Model tersebut memiliki overfit sekitar 2% untuk metrics-metricsnya
+
+  Berdasarkan nilai recallnya (91%) apabila kita memiliki 100 orang nasabah yang resiko gagal bayar maka model KNN hanya dapat menangkap 91 orang diantaranya.
+
+- **Random Forest**
+
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/a7dfeeb7-80d2-4c0e-8e89-637c013c9b14)
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/ef9c47ce-a33c-4d03-9b0e-340b047e7bb9)
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/7004075f-ab79-4b73-b724-553b2f2d6fa5)
+
+  Dari hasil pemodelan dengan algoritma Random Forest secara default, mendapatkan nilai seperti pada tabel diatas. Dari hasil tersebut didapatkan nilai metrics yang lebih baik lagi dari hasil KNN. Model tersebut memiliki overfit sekitar 3%-4% untuk metrics-metricsnya
+
+  Berdasarkan nilai recallnya (96%) apabila kita memiliki 100 orang nasabah yang resiko gagal bayar maka model Random Forest hanya dapat menangkap 96 orang diantaranya.
+
+  Akan tetapi model tersebut memiliki Overfit yang lebih dari model KNN sehingga kami memutuskan untuk menggunakan model Random Forest dengan dilakukan proses Hyperparameter Tuning untuk menangani Overfitting tersebut.
+
+**Best Model Algoritma**
+
+  Kita memilih untuk menggunakan beberapa metric, antara lain yaitu Accuracy, Precision, Recall, & F1. Kemudian kita juga berfokus pada metric recall untuk mengurangi False Negative agar tidak terjadi hasil gagal bayar yang dimana model menganggap mampu membayar. Kemudian dari ketiga algoritma yang dibandingkan, tim kami memilih model Random Forest sebagai model terbaik.
+  
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/530fa258-487b-472f-bb0e-0714ae784e03)
+
+**Threshold from Curve ROC**
+
+  Kami juga melakukan threshold pada rentang 0.1 hingga 0.9 pada kurva ROC. Hal ini dikarenakan kita perlu memilih kondisi terbaik dari metrics yang kita pilih khususnya recall. Berikut hasil threshold yang kami tampilkan dalam tabel.
+  
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/acdc7580-4a07-45c0-a5e3-e0f03988ed52)
+
+  Dari hasil uji Threshold tersebut, kami memilih model dengan threshold 0.4 karena selain nilai recall yang baik (0.93) model tersebut juga memiliki nilai Accurary, Precision, F1-Score yang baik sehingga secara keseluruhan threshold 0.4 memiliki nilai optimal.
+
+**Feature Importance**
+
+  Setelah mendapatkan model yang paling baik dari RF + tuning, kami melakukan interpretasi dari hasil feature importance. Berikut grafik yang dihasilkan dari feature dengan skor nya berikut ini.
+  
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/9228167b-2e08-4313-a699-72bc0f532210)
+
+- Business Insight: Lama bekerja di pekerjaan saat ini bisa menunjukkan stabilitas pekerjaan dan kepuasan dalam posisi tersebut dengan rata-rata lama bekerja selama 6 tahun dengan income rata-rata sebesar 5,000,449
+
+![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/58ad0f14-1426-4d77-bc51-8548b5e5cea9)
+
+Business Recommendation: Pertimbangkan lama bekerja di pekerjaan saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang telah lama bekerja di satu tempat mungkin diberi penawaran pinjaman yang lebih baik karena menunjukkan stabilitas yang lebih tinggi.
+
+- Business  Insight: Pendapatan nasabah merupakan salah satu faktor penting dalam memprediksi kemungkinan gagal bayar. Nasabah dengan pendapatan yang lebih tinggi cenderung memiliki pengalaman kerja yang lama, bekerja di pekerjaan saat ini dalam jangka waktu yang lama, sisa umur produktif kemungkinan tinggal sedikit, dan memiliki kemampuan lebih besar untuk membayar pinjaman mereka tepat waktu Rata-rata umur nasabah yang tidak tergolong dalam risk flag adalah 50 tahun.
+
+Business Recommendation: Dibutuhkan informasi nilai bunga untuk memitigasi resiko nasabah akan menunggak atau tidak dengan Perketat persyaratan pendapatan minimum untuk aplikasi pinjaman. Berikan pinjaman dengan bunga lebih rendah atau kondisi yang lebih baik kepada nasabah dengan pendapatan lebih tinggi untuk mengurangi risiko gagal bayar.
+
+- Business Insight : Lamanya umur nasabah menunjukkan seberapa besar income yang didapatkan, lamanya bekerja di posisi saat ini, lamanya bekerja di perusahaan saat ini, serta jumlah usia produktif yang tersisa dari nasabah.
+
+Business Recommendation: Mempertimbangkan usia saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang usianya kisaran 15 - 64 tahun sebaiknya diberi penawaran pinjaman berdasarkan kelompok remaja (15- 25 tahun), dewasa (26 - 45), dan lansia (46 - 64) yang mengacu ke DepKes RI 2009 karena memudahkan proses penilaian kredit.
+
+- Business  Insight: Banyaknya sisa usia produktif dari nasabah menunjukkan seberapa besar income yang didapatkan, lamanya bekerja di posisi saat ini, lamanya bekerja di perusahaan saat ini, serta usia dari nasabah saat ini.
+
+Business Recommendation: Mempertimbangkan sisa usia produktif saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang sisa usia produktifnya kisaran 15 - 64 tahun sebaiknya diberi penawaran pinjaman karena menunjukkan masih memiliki usia yang produktif untuk bekerja.
