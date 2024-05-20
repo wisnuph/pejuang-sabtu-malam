@@ -173,13 +173,10 @@ Pada tahap ini kami menggunakan tiga algoritma selama proses modelling yang dian
 Business Recommendation: Pertimbangkan lama bekerja di pekerjaan saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang telah lama bekerja di satu tempat mungkin diberi penawaran pinjaman yang lebih baik karena menunjukkan stabilitas yang lebih tinggi.
 
 - Business  Insight: Pendapatan nasabah merupakan salah satu faktor penting dalam memprediksi kemungkinan gagal bayar. Nasabah dengan pendapatan yang lebih tinggi cenderung memiliki pengalaman kerja yang lama, bekerja di pekerjaan saat ini dalam jangka waktu yang lama, sisa umur produktif kemungkinan tinggal sedikit, dan memiliki kemampuan lebih besar untuk membayar pinjaman mereka tepat waktu Rata-rata umur nasabah yang tidak tergolong dalam risk flag adalah 50 tahun.
-
 Business Recommendation: Dibutuhkan informasi nilai bunga untuk memitigasi resiko nasabah akan menunggak atau tidak dengan Perketat persyaratan pendapatan minimum untuk aplikasi pinjaman. Berikan pinjaman dengan bunga lebih rendah atau kondisi yang lebih baik kepada nasabah dengan pendapatan lebih tinggi untuk mengurangi risiko gagal bayar.
 
 - Business Insight : Lamanya umur nasabah menunjukkan seberapa besar income yang didapatkan, lamanya bekerja di posisi saat ini, lamanya bekerja di perusahaan saat ini, serta jumlah usia produktif yang tersisa dari nasabah.
-
 Business Recommendation: Mempertimbangkan usia saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang usianya kisaran 15 - 64 tahun sebaiknya diberi penawaran pinjaman berdasarkan kelompok remaja (15- 25 tahun), dewasa (26 - 45), dan lansia (46 - 64) yang mengacu ke DepKes RI 2009 karena memudahkan proses penilaian kredit.
 
 - Business  Insight: Banyaknya sisa usia produktif dari nasabah menunjukkan seberapa besar income yang didapatkan, lamanya bekerja di posisi saat ini, lamanya bekerja di perusahaan saat ini, serta usia dari nasabah saat ini.
-
 Business Recommendation: Mempertimbangkan sisa usia produktif saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang sisa usia produktifnya kisaran 15 - 64 tahun sebaiknya diberi penawaran pinjaman karena menunjukkan masih memiliki usia yang produktif untuk bekerja.
