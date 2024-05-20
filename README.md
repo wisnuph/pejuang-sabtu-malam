@@ -166,11 +166,10 @@ Pada tahap ini kami menggunakan tiga algoritma selama proses modelling yang dian
   
 ![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/9228167b-2e08-4313-a699-72bc0f532210)
 
-- Business Insight: Lama bekerja di pekerjaan saat ini bisa menunjukkan stabilitas pekerjaan dan kepuasan dalam posisi tersebut dengan rata-rata lama bekerja selama 6 tahun dengan income rata-rata sebesar 5,000,449
+- Business Insight: Lama bekerja di pekerjaan saat ini bisa menunjukkan stabilitas pekerjaan dan kepuasan dalam posisi tersebut dengan rata-rata lama bekerja selama 6 tahun dengan income rata-rata sebesar 5,000,449.
+Business Recommendation: Pertimbangkan lama bekerja di pekerjaan saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang telah lama bekerja di satu tempat mungkin diberi penawaran pinjaman yang lebih baik karena menunjukkan stabilitas yang lebih tinggi.
 
 ![image](https://github.com/wisnuph/pejuang-sabtu-malam/assets/64683758/58ad0f14-1426-4d77-bc51-8548b5e5cea9)
-
-Business Recommendation: Pertimbangkan lama bekerja di pekerjaan saat ini sebagai faktor dalam proses penilaian kredit. Nasabah yang telah lama bekerja di satu tempat mungkin diberi penawaran pinjaman yang lebih baik karena menunjukkan stabilitas yang lebih tinggi.
 
 - Business  Insight: Pendapatan nasabah merupakan salah satu faktor penting dalam memprediksi kemungkinan gagal bayar. Nasabah dengan pendapatan yang lebih tinggi cenderung memiliki pengalaman kerja yang lama, bekerja di pekerjaan saat ini dalam jangka waktu yang lama, sisa umur produktif kemungkinan tinggal sedikit, dan memiliki kemampuan lebih besar untuk membayar pinjaman mereka tepat waktu Rata-rata umur nasabah yang tidak tergolong dalam risk flag adalah 50 tahun.
 Business Recommendation: Dibutuhkan informasi nilai bunga untuk memitigasi resiko nasabah akan menunggak atau tidak dengan Perketat persyaratan pendapatan minimum untuk aplikasi pinjaman. Berikan pinjaman dengan bunga lebih rendah atau kondisi yang lebih baik kepada nasabah dengan pendapatan lebih tinggi untuk mengurangi risiko gagal bayar.
